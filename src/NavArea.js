@@ -5,9 +5,7 @@ const NavArea=()=>{
             
         <ul>
         <div className='nav-left'>
-            <li>
-                <a href='#'>Yoop</a>
-            </li>
+            
             <li>
                 <a href='#'>About</a>
             </li>

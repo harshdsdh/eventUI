@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+body {
+  margin: 0px;
+  background: #000000;
+  font-family: "Roboto", sans-serif;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navarea{
+  grid-area:nav;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content{
+  grid-area:content;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer{
+  grid-area:footer;
+  background-color: rgb(31, 31, 31);
+}
+.wrapper{
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  grid-template-areas:
+    "nav"
+    "content"
+    "footer";
+  grid-template-rows: 10% auto 15%;
+}
+.nav{
+  
+  
+}
+.nav ul{
+  list-style-type: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding : 0% 2%;
+  position: fixed;
+  min-width: 100%;
+ 
+}
+.nav-left{
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+.nav-right{
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+    padding: 0% 3%;
+
+}
+
+a{
+  text-decoration: none;
+  
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+font-weight: 500;
+line-height: 34px;
+font-size: 16px;
+text-align: center;
+letter-spacing: 0.02em;
+opacity: 0.8;
+color: rgb(255, 255, 255);
+}
+a:hover{
+  opacity: 1;
+}
+.main-content{
+color: white;
+padding: 5% 5%;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+
+}
+li{
+  list-style: none;
+}
+.main-content ul{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0%;
+  }
+.main-content ul li {
+  background: rgba(0, 0, 0, 0) linear-gradient(#711de0, #431185) repeat scroll 0% 0%;
+  border-radius: 16px;
+  width: 195px;
+  height: 160px;
+  margin: 0% 1%;
+display: flex;
+justify-content: center;
+align-items: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.footer{
+  display: flex;
+  justify-content: flex-start;
+  
+}
+.footer li{
+  padding: 2% 2%;
+}
+button{
+  padding: 0% 2%;
+width: 94px;
+height: 100%;
+border-radius: 36px;
+border-style: none;
+background-color: #711de0;
+}
+button a{
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+font-weight: bold;
+line-height: 34px;
+font-size: 16px;
+text-align: center;
+letter-spacing: 0.02em;
+opacity: 1;
+color: rgb(255, 255, 255);
+}
+.main-content li a{
+  color:white;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
